@@ -36,11 +36,13 @@ Adds a product to the warehouse using a stored procedure named `AddProductToWare
 ```json
 "ConnectionStrings": {
   "Default": "Server=localhost;Database=WarehouseDb;Trusted_Connection=True;TrustServerCertificate=True"
-}
-Run the application:
-dotnet run --project Tutorial9
-Sample Request
+} ```
 
+## Run the application:
+dotnet run --project Tutorial9
+
+## Sample Request
+```
 POST /api/warehouse/add-manual
 Content-Type: application/json
 {
@@ -48,8 +50,9 @@ Content-Type: application/json
   "idWarehouse": 1,
   "amount": 10,
   "createdAt": "2025-05-10T14:00:00"
-}
-Project Structure
+} ```
+
+## Project Structure
 
 Controllers/WarehouseController.cs – API logic
 Model/WarehouseRequest.cs – input model
@@ -58,14 +61,15 @@ create.sql – SQL script to create and populate the database
 proc.sql – stored procedure implementation
 Validation and Requirements
 
-The project fulfills the following requirements from the assignment:
+## The project fulfills the following requirements from the assignment:
 
 Input validation and error handling
 Manual SQL logic for inserting warehouse data
 Use of a stored procedure for equivalent logic
 Proper HTTP status code responses
 Modular structure and clean code
-Author
+
+## Author
 
 Vladislav Dobriyan
 GitHub: Desstori15
