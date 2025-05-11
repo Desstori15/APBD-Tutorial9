@@ -2,7 +2,7 @@
 
 This project was created as part of the laboratory assignment for the course **Advanced Database Programming (APBD)**.
 
-The goal is to implement a REST API for managing warehouse stock using both inline SQL logic and a stored procedure.
+The goal of the assignment is to implement a REST API that allows interaction with a SQL Server database simulating a warehouse system. The application supports adding products to the warehouse using both inline SQL logic and a stored procedure.
 
 ## Functionality
 
@@ -10,25 +10,28 @@ The `WarehouseController` contains two endpoints:
 
 ### `POST /api/warehouse/add-manual`
 
-Adds a product to the warehouse using inline SQL logic.
+Adds a product to the warehouse using inline SQL commands.
 
-- Verifies the existence of the product and warehouse
-- Checks if a matching order exists in the `Order` table
-- Ensures the order has not been fulfilled yet
-- Updates the `FulfilledAt` field
-- Inserts a record into the `Product_Warehouse` table
-- Returns the ID of the inserted record
+- Verifies the existence of the product and the warehouse.
+- Checks if a matching order exists in the `Order` table (same product and amount, earlier creation date).
+- Ensures that the order has not yet been fulfilled.
+- Updates the `FulfilledAt` field of the order.
+- Inserts a new row into the `Product_Warehouse` table.
+- Returns the ID of the newly inserted row.
 
 ### `POST /api/warehouse/add-procedure`
 
-Same logic as above, implemented using the stored procedure `AddProductToWarehouse`.
+Adds a product to the warehouse using a stored procedure named `AddProductToWarehouse`.
+
+- Accepts the same input as the manual endpoint.
+- Delegates logic to the stored procedure defined in `proc.sql`.
 
 ## How to Run
 
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download)
-2. Create a new database in SQL Server
-3. Run `create.sql` to initialize the schema and test data
-4. Configure the connection string in `appsettings.json`:
+1. Install [.NET SDK 7](https://dotnet.microsoft.com/en-us/download).
+2. Create a new SQL Server database.
+3. Execute the `create.sql` script to generate tables and test data.
+4. In `appsettings.json`, configure the connection string:
 
 ```json
 "ConnectionStrings": {
@@ -50,16 +53,18 @@ Project Structure
 
 Controllers/WarehouseController.cs – API logic
 Model/WarehouseRequest.cs – input model
-Services/DbService.cs – optional business logic helper
-create.sql – database structure and test data
-proc.sql – stored procedure definition
-The project fulfills the following requirements
+Services/DbService.cs – (optional business logic helper)
+create.sql – SQL script to create and populate the database
+proc.sql – stored procedure implementation
+Validation and Requirements
+
+The project fulfills the following requirements from the assignment:
 
 Input validation and error handling
 Manual SQL logic for inserting warehouse data
-Use of a stored procedure
+Use of a stored procedure for equivalent logic
 Proper HTTP status code responses
-Clean and modular code structure
+Modular structure and clean code
 Author
 
 Vladislav Dobriyan
