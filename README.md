@@ -42,7 +42,7 @@ Adds a product to the warehouse using a stored procedure named `AddProductToWare
 
 ```bash
 dotnet run --project Tutorial9
-
+Sample Request
 
 POST /api/warehouse/add-manual
 Content-Type: application/json
@@ -52,25 +52,17 @@ Content-Type: application/json
   "amount": 10,
   "createdAt": "2025-05-10T14:00:00"
 }
-
-## Project Structure
+Project Structure
 
 Controllers/WarehouseController.cs – API logic
 Model/WarehouseRequest.cs – input model
-Services/DbService.cs – (optional business logic helper)
-create.sql – SQL script to create and populate the database
+Services/DbService.cs – optional business logic helper
+create.sql – database structure and sample data
 proc.sql – stored procedure implementation
-Validation and Requirements
-
-## The project fulfills the following requirements from the assignment:
+The project fulfills the following requirements:
 
 Input validation and error handling
 Manual SQL logic for inserting warehouse data
-Use of a stored procedure for equivalent logic
+Use of a stored procedure
 Proper HTTP status code responses
-Modular structure and clean code
-
-## Author
-
-Vladislav Dobriyan
-GitHub: Desstori15
+Clean and modular code structure
