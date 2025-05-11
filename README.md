@@ -36,12 +36,12 @@ Adds a product to the warehouse using a stored procedure named `AddProductToWare
 ```json
 "ConnectionStrings": {
   "Default": "Server=localhost;Database=WarehouseDb;Trusted_Connection=True;TrustServerCertificate=True"
-} ```
+} 
 
-## Run the application:
+  ## Run the application:
 dotnet run --project Tutorial9
 
-## Sample Request
+  ## Sample Request
 ```
 POST /api/warehouse/add-manual
 Content-Type: application/json
