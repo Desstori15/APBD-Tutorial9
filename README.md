@@ -37,7 +37,7 @@ Adds a product to the warehouse using a stored procedure named `AddProductToWare
 "ConnectionStrings": {
   "Default": "Server=localhost;Database=WarehouseDb;Trusted_Connection=True;TrustServerCertificate=True"
 } 
-
+```
   
 ## Sample Request
 
