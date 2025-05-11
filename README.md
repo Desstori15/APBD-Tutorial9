@@ -49,7 +49,8 @@ Content-Type: application/json
   "idWarehouse": 1,
   "amount": 10,
   "createdAt": "2025-05-10T14:00:00"
-} ```
+}
+```
 
 ## Project Structure
 
