@@ -42,7 +42,7 @@ Adds a product to the warehouse using a stored procedure named `AddProductToWare
 
 ```bash
 dotnet run --project Tutorial9
-Sample Request
+Sample Request ```
 
 POST /api/warehouse/add-manual
 Content-Type: application/json
