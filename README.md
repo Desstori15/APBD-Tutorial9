@@ -54,20 +54,20 @@ Content-Type: application/json
 
 ## Project Structure
 
-Controllers/WarehouseController.cs – API logic
-Model/WarehouseRequest.cs – input model
-Services/DbService.cs – (optional business logic helper)
-create.sql – SQL script to create and populate the database
-proc.sql – stored procedure implementation
-Validation and Requirements
+- Controllers/WarehouseController.cs – API logic
+- Model/WarehouseRequest.cs – input model
+- Services/DbService.cs – (optional business logic helper)
+- reate.sql – SQL script to create and populate the database
+- proc.sql – stored procedure implementation
+- Validation and Requirements
 
 ## The project fulfills the following requirements from the assignment:
 
-Input validation and error handling
-Manual SQL logic for inserting warehouse data
-Use of a stored procedure for equivalent logic
-Proper HTTP status code responses
-Modular structure and clean code
+- Input validation and error handling
+- Manual SQL logic for inserting warehouse data
+- Use of a stored procedure for equivalent logic
+- Proper HTTP status code responses
+- Modular structure and clean code
 
 ## Author
 
