@@ -1,0 +1,17 @@
+# Build results
+bin/
+obj/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log

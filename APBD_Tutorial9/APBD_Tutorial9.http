@@ -1,0 +1,6 @@
+@APBD_Tutorial9_HostAddress = http://localhost:5272
+
+GET {{APBD_Tutorial9_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
